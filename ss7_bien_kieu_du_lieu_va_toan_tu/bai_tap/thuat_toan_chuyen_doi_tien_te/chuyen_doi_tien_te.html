@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            <input id="monney" type="text">
+        </td>
+        <td>
+            <select id="From" name="">
+                <option value="VNĐ">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="To" name="">
+                <option value="VNĐ">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="changemoney()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="Resulf"></p>
+<script>
+    function changemoney(){
+        let sotiennhap = document.getElementById("monney").value;// lấy giá trị nhập vào
+        let From = document.getElementById("From").value;
+        let To = document.getElementById("To").value;
+        let Resulf;
+        if (From =="VNĐ" && To =="USD"){           //nếu đổi từ VNĐ qua USD
+            Resulf= "Resulf: " +(sotiennhap/23000) + '$';
+        }
+        if (From == "USD" && To == "VNĐ"){
+            Resulf= "Resulf: " +(sotiennhap*23000) + 'vnđ';
+        }
+        if( From == To){
+            Resulf= "Resulf: " +(sotiennhap);
+        }
+        document.getElementById("Resulf").innerHTML = Resulf;    //đưa giá trị lên màn hình
+    }
+</script>
+</body>
+</html>

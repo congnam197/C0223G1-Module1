@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+     <script>
+       let inputPhysics
+       let inputChemistry
+       let inputBiology
+       inputPhysics= prompt('Nhập điểm Vật Lý');
+       inputChemistry=prompt('Nhập điểm Hóa Học');
+       inputBiology= prompt('Nhập điểm sinh học');
+       let physics= parseInt(inputPhysics);
+       let chemistry= parseInt(inputChemistry);
+       let biolory= parseInt(inputBiology);
+       let average= (physics+chemistry+biolory)/3;
+       let total= physics+chemistry+biolory;
+       document.write('Điểm trung bình cộng là  ' + average);
+       document.write('Tổng điểm la ' +total);
+     </script>
+</body>
+</html>
