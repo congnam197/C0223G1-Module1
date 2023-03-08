@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<input id="radius" type="text" name="" placeholder="Nhập bán kính đường tròn">
+<button onclick="tinh()">Nhập</button>
+<p id="resulf"></p>
 </body>
+<script>
+    function tinh() {
+        let PI;
+        PI=3.14;
+        let r = document.getElementById("radius").value;
+        let chuvi = r*2*PI;
+
+        document.getElementById('resulf').innerHTML ="chu vi hình tròn là : "+(chuvi);
+    }
+</script>
 </html>

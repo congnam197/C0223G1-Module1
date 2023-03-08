@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Diện Tích Hình Tròn</title>
+</head>
+<body>
+<input id="radius" type="text" name="" placeholder="Nhập bán kính đường tròn">
+<button onclick="tinh()">Nhập</button>
+<p id="resulf"></p>
+</body>
+<script>
+  function tinh() {
+    let PI;
+    PI=3.14;
+    let r = document.getElementById("radius").value;
+    let dienTich =r*r*PI;
+    document.getElementById('resulf').innerHTML ="diện tích hình tròn là : "+(dienTich);
+  }
+</script>
+
+</body>
+</html>
