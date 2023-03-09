@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input id="soPhut" type="text" name="" placeholder="Nhập số phút gọi" >
+        </td>
+        <td>
+            <select id="goiDt">
+                <option value="790">Nội mạng</option>
+                <option value="1000">Ngoại mạng</option>
+                <option value="3500">Quốc tế</option>
+                <option value="3000">Tư vấn TT-KT</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="Tinh()">Kiểm tra</button>
+        </td>
+    </tr>
+</table>
+<p id="giaTri">Số tiền cước cần trả :</p>
+<script>
+    function Tinh() {
+        let soPhutgoi = document.getElementById('soPhut').value;
+        let cuocGoi= document.getElementById('goiDt').value;
+        let soTien = soPhutgoi*cuocGoi
+        document.getElementById('giaTri').innerText= 'Số tiền cước cần trả :' +soTien +'đ';
+    }
+</script>
+</body>
+</html>

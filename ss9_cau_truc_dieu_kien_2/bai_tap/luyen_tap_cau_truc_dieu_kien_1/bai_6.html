@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhSo = +prompt("Nhập doanh số bán hàng tháng này (triệu đồng)");
+    let hoaHong1 = doanhSo * 0.03;
+    let hoaHong2 = doanhSo * 0.03 + (doanhSo - 10) * 0.05;
+    let hoaHong3 = (doanhSo * 0.03) + (doanhSo - 10) * 0.05 + (doanhSo - 50) * 0.07;
+    if (doanhSo < 10) {
+        alert('Hoa hồng = ' + hoaHong1 + 'triệu đồng');
+    } else if (doanhSo >= 10) {
+        alert('Hoa hồng = ' + hoaHong2 + 'triệu đồng');
+    } else if (doanhSo >= 50){
+        alert('Hoa hồng = ' + hoaHong3 + 'triệu đồng');
+    }else{
+    }
+</script>
+</body>
+</html>
