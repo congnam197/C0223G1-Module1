@@ -5,18 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<input id="radius" type="text" name="" placeholder="Nhập bán kính đường tròn">
+<input id="raDius" type="text" name="" placeholder="Nhập bán kính đường tròn">
 <button onclick="tinh()">Nhập</button>
-<p id="resulf"></p>
+<p id="reSulf"></p>
 </body>
 <script>
     function tinh() {
         let PI;
         PI=3.14;
-        let r = document.getElementById("radius").value;
-        let chuvi = r*2*PI;
+        let r = document.getElementById("raDius").value;
+        let chuVi = r*2*PI;
 
-        document.getElementById('resulf').innerHTML ="chu vi hình tròn là : "+(chuvi);
+        document.getElementById('reSulf').innerHTML ="chu vi hình tròn là : "+(chuVi);
     }
 </script>
 </html>

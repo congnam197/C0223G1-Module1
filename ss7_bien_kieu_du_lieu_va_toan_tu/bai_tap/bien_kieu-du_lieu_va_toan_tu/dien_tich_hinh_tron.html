@@ -5,17 +5,17 @@
     <title>Tính Diện Tích Hình Tròn</title>
 </head>
 <body>
-<input id="radius" type="text" name="" placeholder="Nhập bán kính đường tròn">
+<input id="raDius" type="text" name="" placeholder="Nhập bán kính đường tròn">
 <button onclick="tinh()">Nhập</button>
-<p id="resulf"></p>
+<p id="reSulf"></p>
 </body>
 <script>
   function tinh() {
     let PI;
     PI=3.14;
-    let r = document.getElementById("radius").value;
+    let r = document.getElementById("raDius").value;
     let dienTich =r*r*PI;
-    document.getElementById('resulf').innerHTML ="diện tích hình tròn là : "+(dienTich);
+    document.getElementById('reSulf').innerHTML ="diện tích hình tròn là : "+(dienTich);
   }
 </script>
 
