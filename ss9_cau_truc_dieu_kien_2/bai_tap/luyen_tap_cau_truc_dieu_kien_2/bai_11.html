@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><h2>Tính Thuế Thu Nhập Cá Nhân</h2></p>
+Tổng Thu Nhập : <input id="thuNhap" type="text" name="" placeholder="Triệu đồng"><br><br>
+Người Phụ Thuộc : <input id="soNguoi" type="text" name="" size="10" placeholder="Số người"><br><br>
+<button onclick="tinhTienThue()">Tiền thuế</button>
+<p id="tienThuePhaiDong">Tiền thuế phải đóng là :</p>
+</body>
+<script>
+    function tinhTienThue() {
+        let tongThuNhap = document.getElementById('thuNhap').value * 1;
+        let phuThuoc = document.getElementById('soNguoi').value * 1;
+        let giamTruCaNhan = 11.0;
+        let giaTriPhuThuoc = phuThuoc*4.4;
+        let thuNhapTinhThue=tongThuNhap-giamTruCaNhan-giaTriPhuThuoc;
+        let tienThue;
+        if (thuNhapTinhThue < giaTriPhuThuoc) {
+            document.getElementById('tienThuePhaiDong').innerText = 'Bạn không phải đóng thuê';
+        } else if (thuNhapTinhThue >giaTriPhuThuoc) {
+            if (thuNhapTinhThue <= 5.0) {
+                tienThue = thuNhapTinhThue * 0.05;
+                document.getElementById("tienThuePhaiDong").innerText = 'Tiền thuế phải đóng là :' + tienThue +'triệu đồng';
+            } else if (thuNhapTinhThue <= 10.0) {
+                tienThue = thuNhapTinhThue * 0.1 - 0.25;
+                document.getElementById('tienThuePhaiDong').innerText = 'Tiền thuế phải đóng là :' + tienThue +'triệu đồng';
+            } else if (thuNhapTinhThue <= 18) {
+                tienThue = thuNhapTinhThue * 0.15 - 0.75;
+                document.getElementById('tienThuePhaiDong').innerText = 'Tiền thuế phải đóng là :' + tienThue +'triệu đồng';
+            } else if (thuNhapTinhThue <= 32) {
+                tienThue = thuNhapTinhThue * 0.2 - 1.6;
+                document.getElementById('tienThuePhaiDong').innerText = 'Tiền thuế phải đóng là :' + tienThue +'triệu đồng';
+            } else if (thuNhapTinhThue <= 52) {
+                tienThue = thuNhapTinhThue * 0.25 - 3.25;
+                document.getElementById('tienThuePhaiDong').innerText = 'Tiền thuế phải đóng là :' + tienThue +'triệu đồng';
+            } else if (thuNhapTinhThue <= 80) {
+                tienThue = thuNhapTinhThue * 0.3 - 5.85;
+                document.getElementById('tienThuePhaiDong').innerText = 'Tiền thuế phải đóng là :' + tienThue +'triệu đồng';
+            } else
+                tienThue = thuNhapTinhThue * 0.35 - 9.85;
+            document.getElementById("tienThuePhaiDong").innerText = 'Tiền thuế phải đóng là :' + tienThue +'triệu đồng';
+        }
+    }
+</script>
+</html>

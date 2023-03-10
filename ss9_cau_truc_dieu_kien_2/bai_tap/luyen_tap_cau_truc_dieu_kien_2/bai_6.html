@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Phương trình bậc 1 có dạng: <br>
+    ax + b = 0
+</p>
+<input id="nhapA" type="text"   placeholder="Nhập a">
+<input id="nhapB" type="text"   placeholder="Nhập b">
+<button onclick="giai ()" >Tìm X</button>
+<p id="hienThi" >Kết quả là:  </p>
+<script>
+    function giai() {
+        let heSoA = document.getElementById('nhapA').value;
+        let heSoB = document.getElementById('nhapB').value;
+        let ketQua = -heSoB/heSoA
+        document.getElementById('hienThi').innerText='Kết quả là: x = ' +ketQua;
+        }
+
+</script>
+</body>
+</html>

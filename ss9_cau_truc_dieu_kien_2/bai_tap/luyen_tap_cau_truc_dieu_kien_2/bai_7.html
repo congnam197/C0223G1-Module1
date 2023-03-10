@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Phương trình bậc 2 có dạng: <br>
+    ax<sup>2</sup> +bx + c = 0 <br><br>
+    <input id="nhapA" type="text" placeholder="Nhập a">
+    <input id="nhapB" type="text" placeholder="Nhập b">
+    <input id="nhapC" type="text" placeholder="Nhập c"><br><br>
+    <button onclick="tinh()">Tìm X</button>
+</p>
+<p id="ketQua">Phương trình có nghiệm là</p>
+</body>
+<script>
+    function tinh() {
+        let heSoA = document.getElementById('nhapA').value * 1;
+        let heSoB = document.getElementById('nhapB').value * 1;
+        let heSoC = document.getElementById('nhapC').value * 1;
+        let delTa;
+        delTa = heSoB * heSoB - 4 * heSoA * heSoC;
+        if (delTa < 0) {
+            document.getElementById('ketQua').innerText = 'Phương trình vô nghiệm';
+        } else if (delTa == 0) {
+            document.getElementById('ketQua').innerText = 'Phương trình có nghiệm kép x = ' + -heSoB / 2 * heSoC;
+        } else {
+            let nghiemX1 = (-heSoB + Math.sqrt(delTa)) / 2 * heSoA * 1
+            let nghiemX2 = (-heSoB - Math.sqrt(delTa)) / 2 * heSoA * 1
+            document.getElementById('ketQua').innerText = "Phương trình có 2 nghiệm x1 = " + nghiemX1 + ';' + '  ' + 'x2 = ' + nghiemX2;
+        }
+    }
+</script>
+</html>

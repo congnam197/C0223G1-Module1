@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><h3>Tính Giá Điện</h3></p><br>
+  <p>Sản lượng điện tiêu dùng: <input id="sanLuong" type="text" name=" " placeholder="kWh">
+<select id ="giaDien" >
+    <option value="1678">0-50 kWh</option>
+    <option value="1734">51-100 kWh</option>
+    <option value="2014">101-200 kWh</option>
+    <option value="2536">201-300 kWh</option>
+    <option value="2834">301-400 kWh</option>
+    <option value="2927">Trên 400kWh</option>
+</select></p>
+<button onclick="tinh()" type="button">Tính tiền</button>
+<p id="ketQua">Số tiền điện phải trả trong tháng này là :</p>
+<script>
+    function tinh () {
+        let sanLuongTieuDung = document.getElementById("sanLuong").value * 1;
+        let giaDien = document.getElementById('giaDien').value * 1;
+        let tienDien = sanLuongTieuDung * giaDien;
+        if (sanLuongTieuDung < 50) {
+            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
+        } else if (sanLuongTieuDung < 100) {
+            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
+        } else if (sanLuongTieuDung < 100) {
+            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
+        } else if (sanLuongTieuDung < 200) {
+            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
+        } else if (sanLuongTieuDung < 300) {
+            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
+        } else if (sanLuongTieuDung < 400) {
+            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
+        } else {
+            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
+        }
+    }
+
+</script>
+</body>
+
+</html>

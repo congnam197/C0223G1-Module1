@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+<h3>Tính lãi kép</h3></p>
+Số tiền vay: <input id="nhapSoTien" type="text" name=" " placeholder="triệu đồng"><br><br>
+Số năm vay :<input id="soNam" name="" type="text"><br><br>
+Lãi suất :<input id="nhapLaiSuat" type="text"><br><br>
+<button onclick="tinh()">Tính</button>
+<p id="ketQua">Số tiền lãi là: </p>
+<script>
+    function tinh() {
+        let tienVay =document.getElementById('nhapSoTien').value *1;
+        let soNamVay = document.getElementById('soNam').value * 1;
+        let laiSuatTheoNam = document.getElementById('nhapLaiSuat').value * 1;
+        let tienTichluyNo = tienVay * Math.pow((1 +(laiSuatTheoNam/100) / 12),soNamVay*12);
+        let tienLai=tienTichluyNo-tienVay
+        document.getElementById('ketQua').innerText = 'Số tiền lãi là : ' + tienLai+' '+'triệu đồng';
+     }
+</script>
+</body>
+</html>
