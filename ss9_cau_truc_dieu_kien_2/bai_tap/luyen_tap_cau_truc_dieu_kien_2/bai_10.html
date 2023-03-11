@@ -24,15 +24,13 @@
         let tienDien = sanLuongTieuDung * giaDien;
         if (sanLuongTieuDung <=50) {
             document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
-        } else if (sanLuongTieuDung <=100) {
+        } else if (sanLuongTieuDung <=100 && sanLuongTieuDung>50) {
             document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
-        } else if (sanLuongTieuDung <=100) {
+        } else if (sanLuongTieuDung <=200 && sanLuongTieuDung>100) {
             document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
-        } else if (sanLuongTieuDung <=200) {
+        } else if (sanLuongTieuDung <=300 && sanLuongTieuDung>200) {
             document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
-        } else if (sanLuongTieuDung <=300) {
-            document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
-        } else if (sanLuongTieuDung <=400) {
+        } else if (sanLuongTieuDung <=400 && sanLuongTieuDung >300) {
             document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
         } else {
             document.getElementById('ketQua').innerText = 'Số tiền điện phải trả trong tháng này là ' + tienDien + 'đồng';
