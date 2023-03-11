@@ -2,9 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Máy tính đôn giản</title>
+    <title>Title</title>
 </head>
 <body>
-
+<table>
+    <tr>
+        <td><input id="nhap" type="text" name="" value=""></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so1()" type="button">1</button>
+            <button onclick="so2()" type="button">2</button>
+            <button onclick="so3()" type="button">3</button>
+            <button onclick="cong()" type="button">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so4()" type="button">4</button>
+            <button onclick="so5()" type="button">5</button>
+            <button onclick="so6()" type="button">6</button>
+            <button onclick="tru()" type="button">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so7()" type="button">7</button>
+            <button onclick="so8()" type="button">8</button>
+            <button onclick="so9()" type="button">9</button>
+            <button onclick="nhan()" type="button">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="xoa()"  id="xoa">C</button>
+            <button onclick="so0()" type="button">0</button>
+            <button onclick="bang()" type="button">=</button>
+            <button onclick="chia()" type="button">/</button>
+        </td>
+    </tr>
+</table>
 </body>
+<script>
+    function so1(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+1;
+    }
+    function so2(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+2;
+    }
+    function so3(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+3;
+    }
+    function so4(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+4;
+    }
+    function so5(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+5;
+    }
+    function so6(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+6;
+    }
+    function so7(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+7;
+    }
+    function so8(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+8;
+    }
+    function so9(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+9;
+    }
+    function so0(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+0;
+    }
+    function cong(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+ '+';
+    }
+    function tru(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+ "-";
+    }
+    function nhan(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+'*';
+    }
+    function chia(){
+        let a = document.getElementById('nhap').value;
+        document.getElementById('nhap').value = a+'/';
+    }
+    function bang() {
+        let a = document.getElementById("nhap").value;
+        document.getElementById("nhap").value=(eval(a));
+    }
+    function xoa(){
+        let string = document.getElementById("nhap").value;
+        let xoaSo = string.toString()
+        document.getElementById("nhap").value = xoaSo.substring(0,xoaSo.length-1);
+    }
+</script>
 </html>
