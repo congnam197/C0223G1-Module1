@@ -17,8 +17,15 @@
         let heSoA = document.getElementById('nhapA').value;
         let heSoB = document.getElementById('nhapB').value;
         let ketQua = -heSoB/heSoA
-        document.getElementById('hienThi').innerText='Kết quả là: x = ' +ketQua;
+        if (heSoA == 0 && heSoB == 0){
+            document.getElementById('hienThi').innerText='Phương trình vô số nghiệm';
+        }else if (heSoA == 0){
+            document.getElementById('hienThi').innerText='Phương trình vô nghiệm';
+
+        }else{
+            document.getElementById('hienThi').innerText='Kết quả là: x = ' +ketQua;
         }
+    }
 
 </script>
 </body>
