@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> sử dụng vòng lặp for</p>
+<script>
+    let sout;
+    sout = "<table border='1' width='10' cellSpacing='0' cellPadding='10'>" //tạo 1 ô
+    for (i = 1; i <= 10; i++) {
+        sout = sout + '<tr>';// lặp hàng
+        for (j = 1; j <= 10; j++) {
+            sout = sout + '<td>' + i * j + "</td>";// lặp cột
+        }
+        sout = sout + '</tr>';
+
+    }
+    sout = sout + '</table>';// lặp bẳng
+    document.write(sout);
+</script>
+<hr>
+<p> sử dụng vòng lặp While</p>
+<script>
+    let tab, i, j;
+    tab = "<table border='1' width='10' cellSpacing='0' cellPadding='10'>"
+    i = j = 1;
+    while (i <= 10) {
+        tab = tab + '<tr>';
+        while (j <= 10) {
+            tab = tab + '<td>' + j * i + '</td>';
+            j++
+        }
+        tab = tab + '<tr>';
+        j = 1;
+        i++
+    }
+    tab=tab+'</table>'
+    document.write(tab)
+
+</script>
+</body>
+</html>

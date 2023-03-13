@@ -17,39 +17,42 @@
 </body>
 <script>
     function Add() {
-        let sothunhat = document.getElementById('number1').value *1;
-        let sothuhai = document.getElementById("number2").value *1;
-        let tong= (sothunhat + sothuhai);
+        let sothunhat = document.getElementById('number1').value * 1;
+        let sothuhai = document.getElementById("number2").value * 1;
+        let tong = (sothunhat + sothuhai);
         let Resulf;
-            Resulf ="Resulf: " +(tong);
+        Resulf = "Resulf: " + (tong);
 
         document.getElementById("Resulf").innerHTML = Resulf;
     }
-function Sub() {
-    let sothunhat = document.getElementById('number1').value * 1;
-    let sothuhai = document.getElementById('number2').value * 1;
-    let hieu = (sothunhat - sothuhai);
-    let Resulf;
-    Resulf = 'Resulf: ' + (hieu);
 
-    document.getElementById("Resulf").innerHTML = Resulf;
-}
-function Mul(){
-        let sothunhat = document.getElementById('number1').value *1;
-        let sothuhai = document.getElementById('number2').value *1;
-        let mul=(sothunhat*sothuhai);
+    function Sub() {
+        let sothunhat = document.getElementById('number1').value * 1;
+        let sothuhai = document.getElementById('number2').value * 1;
+        let hieu = (sothunhat - sothuhai);
+        let Resulf;
+        Resulf = 'Resulf: ' + (hieu);
+
+        document.getElementById("Resulf").innerHTML = Resulf;
+    }
+
+    function Mul() {
+        let sothunhat = document.getElementById('number1').value * 1;
+        let sothuhai = document.getElementById('number2').value * 1;
+        let mul = (sothunhat * sothuhai);
         let Resulf;
         Resulf = 'Resulf: ' + (mul);
-        document.getElementById('Resulf').innerHTML= Resulf
-}
-function Div(){
-    let sothunhat = document.getElementById('number1').value *1;
-    let sothuhai = document.getElementById('number2').value *1;
-    let div=(sothunhat/sothuhai);
-    let Resulf;
-    Resulf = 'Resulf: ' + (div);
-    document.getElementById('Resulf').innerHTML= Resulf
+        document.getElementById('Resulf').innerHTML = Resulf
+    }
 
-}
+    function Div() {
+        let sothunhat = document.getElementById('number1').value * 1;
+        let sothuhai = document.getElementById('number2').value * 1;
+        let div = (sothunhat / sothuhai);
+        let Resulf;
+        Resulf = 'Resulf: ' + (div);
+        document.getElementById('Resulf').innerHTML = Resulf
+
+    }
 </script>
 </html>

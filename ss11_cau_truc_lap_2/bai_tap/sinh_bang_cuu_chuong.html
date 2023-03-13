@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<center>
+<h1> BẢNG CỬU CHƯƠNG</h1>
+<body>
+<script>
+    let i = 1;
+    let j = 2;
+    let tab = "<table border='0' width='10' cellSpacing='0' cellPadding='15'>"
+    for (i = 1; i <= 10; i++) {
+        tab = tab + '<tr>'
+        for (j = 2; j <= 10; j++) {
+            var product = j * i;
+            tab = tab + '<td>' + j + 'x' + i + '=' + product + '</td>'
+        }
+        tab = tab + '</tr>'
+    }
+    tab = tab + '</table>'
+    document.write(tab);
+</script>
+</body>
+</center>
+</html>

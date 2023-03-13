@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="nhapSo()" type="button">Nhập số</button>
+<script>
+    function nhapSo() {
+        let inputKhoang = +prompt('Nhập khoảng lớn nhất bạn muốn đoán');
+        let soDung = Math.floor(Math.random() * inputKhoang);
+        console.log(soDung);
+        for (i = 1; i < 4; i++) {
+            let inputSo = +prompt('Nhập số bạn muốn đoán');
+            if (inputSo < soDung) {
+                alert('số bạn đoán lớn hơn');
+            } else if (inputSo > soDung) {
+                alert('số bạn đoán nhỏ hơn');
+            } else {
+                alert('chúc mừng bạn! bạn đã đoán đúng!')
+            }
+
+        }
+        alert('chúc bạn may mắn lần sau');
+    }
+
+</script>
+</body>
+</html>

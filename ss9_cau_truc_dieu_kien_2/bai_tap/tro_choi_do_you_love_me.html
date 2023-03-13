@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    button{
+        color: white;
+        background-color:red;
+    }
+    .loVe{
+        color: blueviolet;
+    }
+</style>
+<body>
+<h1 style="color: red;" >DO YOU LOVE ME</h1>
+<button style="width: 64px;height:40px; " onclick="yes()" >YES</button>
+<button onmouseover="no()" style= "position: absolute;width: 64px;height:40px ;left: 500px; top: 500px "  id="no">NO</button>
+<h3 class="loVe" id="love"></h3>
+
+<script>
+    function yes(){
+        alert("Are you sure?");
+        document.getElementById("love").innerText="I Love You too so much!";
+    }
+    function no(){
+        let x = Math.random()*window.innerWidth;
+        let y = Math.random()*window.innerHeight;
+        document.getElementById("no").style.left = x +"px";
+        document.getElementById("no").style.top = y+"px";
+    }
+</script>
+</body>
+</html>

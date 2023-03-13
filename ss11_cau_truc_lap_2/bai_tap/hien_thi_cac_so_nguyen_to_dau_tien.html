@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt('nhập số lượng số nguyên tố cần in ra');
+    checkNT(number);
+
+    function checkNT(number) {
+        let count = 0;                            // đếm số ước
+        let countSNT = 0;                         // đếm số cần in ra
+        for (let n = 2; n < 1000; n++) {
+            if (countSNT < number) {
+                for (let j = 1; j <= n; j++) {
+                    if (n % j == 0) {
+                        count += 1;
+                    }
+                }
+                if (count == 2) {
+                    document.write(n + '<br>');
+                    countSNT += 1;
+                }
+                count = 0;
+            } else {
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>

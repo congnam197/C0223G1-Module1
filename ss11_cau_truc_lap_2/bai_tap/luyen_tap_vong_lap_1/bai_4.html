@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let  n1= 0 , n2= 0, nextnumber=0
+    let chiahet5 = '';
+    for (let i=0; i<20;i++){
+         if(i==0){
+             nextnumber=1;
+             n2=1;
+             console.log(i);
+         }else{
+            nextnumber= n1+n2;
+            n1 = n2;
+            n2 = nextnumber;
+            console.log(i +" = "+nextnumber);
+            if(nextnumber % 5 == 0){
+              chiahet5  = nextnumber;
+                break;
+            }
+         }
+    }
+    document.write("Sô chia hết cho 5 trong dãy là "+ chiahet5);
+
+
+</script>
+</body>
+</html>
