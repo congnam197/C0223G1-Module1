@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // hình 1
+  for (let i = 0; i<5; i++) {
+      for (let j = 0; j <= i; j++) {
+          let hinhSao = "*";
+          document.write(hinhSao);
+      }
+          document.write("<br>");
+      }
+  // hình 2
+  document.write('<br><br>');
+  for (let i = 5; i>0; i--) {
+      for (let j = 1; j <= i; j++) {
+          let hinhSao = "*";
+          document.write(hinhSao);
+      }
+      document.write("<br>");
+  }
+  document.write('<br><br>')
+  // hình 3
+  document.write("<div style= 'width:40px' align='right' >");
+    for (let i = 0; i<5; i++) {
+        for (let j = 0; j <= i; j++) {
+            let hinhSao = "*";
+            document.write(hinhSao);
+        }
+        document.write("<br>");
+    }
+  document.write('</div>');
+    document.write('<br><br>');
+// hình 4
+    document.write("<div style = 'width:40px' align = 'right'>");
+    for (let i=5; i>0; i--){
+        for (let j=1; j<=i; j++){
+            let hinhSao='*';
+            document.write(hinhSao);
+        }
+
+        document.write('<br>');
+    }
+document.write('</div>')
+
+</script>
+</body>
+</html>
