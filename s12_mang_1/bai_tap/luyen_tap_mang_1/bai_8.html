@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let daySo = '';
+    let mangSo = [];
+    for (let i = 0; i <10; i++) {
+        daySo = prompt('nhập dãy số');
+        mangSo.push(daySo);
+    }
+    mangSo.sort(function (a,b){
+        return b-a
+    })
+        document.write(mangSo);
+</script>
+</body>
+</html>

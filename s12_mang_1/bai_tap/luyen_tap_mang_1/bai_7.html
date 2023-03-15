@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [1,2,3,4,5,6,7,8,9,10];
+    let number=+prompt('nhập 1 số vào');
+    let xoa = true;
+    let mangnew = []
+    for (let i=0;i<10;i++){
+        if(mang[i] == number){
+            xoa =false;
+        }
+        if (mang[i] !=number){
+            mangnew.push(mang[i]);
+        }
+    }
+    document.write("mang = ["+mang+"]<br>");
+    if(xoa == false){
+        document.write("Đã xóa phần tử"+' '+number+'. ' +"mang = ["+mangnew+"]");
+    }
+</script>
+</body>
+</html>

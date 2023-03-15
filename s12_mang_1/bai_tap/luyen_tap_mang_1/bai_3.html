@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [2, 4, 5, 14, 57, 86, 49];
+    let max = numbers[0];
+    let giaTriTB = 0;
+    let tong = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        tong += numbers[i];
+        giaTriTB = tong / numbers.length
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    document.write('số lớn nhất là :' + max + ' ' + 'và giá trị trung bình của mảng là' + ' ' + giaTriTB);
+
+</script>
+</body>
+</html>

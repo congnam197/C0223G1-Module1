@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [1, 4, 6, 8, 14, 65, 23, 785, 34, 154];
+    let max = numbers[0];
+    let index = 0
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+            index = i;
+        }
+    }
+    document.write('số lớn nhất trong mảng là :' + ' ' + max + ' ' + 'ở vị trí :' + ' ' + index);
+
+</script>
+</body>
+</html>

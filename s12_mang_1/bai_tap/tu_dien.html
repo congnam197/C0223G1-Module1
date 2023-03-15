@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<input id="nhapTu" type="text" placeholder="Nhập từ cần tra nghĩa">
+<button onclick="kiemTra()">Tìm Kiếm</button>
+<p id="tiengViet"></p>
+<script>
+    let tViet = ["chuối", "trứng", "cửa sổ", "cái gì?", "ở đâu?"];
+    let tAnh = ["banana", "egg", "window", "what", "where"];
+    let traTu = document.getElementById('nhapTu');
+    console.log(traTu.value);
+    let dem = 0
+    function kiemTra() {
+        for (let i = 0; i <= tAnh.length; i++) {
+            if (traTu.value == tAnh[i]) {
+                dem = 0;
+                document.getElementById('tiengViet').innerHTML = tViet[i];
+                break;
+            } else {
+                dem++;
+            }
+            if (dem != 0) {
+                document.getElementById('tiengViet').innerHTML = ('không có trong từ điển');
+            }
+        }
+    }
+</script>
+</body>
+</html>
