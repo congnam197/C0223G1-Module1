@@ -10,15 +10,14 @@
     let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let chuThuong = "abcdefghijklmnopqrstuvwxyz";
     let ketqua = [];
-
-    for (let i=0; i<chuoi.length; i++){
-        let viTriChuHoa=chuHoa.indexOf(chuoi[i]);
-        let viTriChuTHuong=chuThuong.indexOf(chuoi[i]);
-        if( viTriChuHoa!== -1){
+    for (let i = 0; i < chuoi.length; i++) {
+        let viTriChuHoa = chuHoa.indexOf(chuoi[i]);
+        let viTriChuTHuong = chuThuong.indexOf(chuoi[i]);
+        if (viTriChuHoa !== -1) {
             ketqua.push(chuoi[i].toLowerCase());
-        }else if(viTriChuTHuong!== -1){
+        } else if (viTriChuTHuong !== -1) {
             ketqua.push(chuoi[i].toUpperCase());
-        }else{
+        } else {
             ketqua.push(chuoi[i]);
         }
     }

@@ -6,17 +6,16 @@
 </head>
 <body>
 <script>
-    // let daySo = '';
     let mangSoNguyen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let soNguyen = +prompt('nhập số nguyên kiểm tra');
-    console.log(soNguyen)
+    console.log(soNguyen);
     let dem = 0;
     for (let i = 1; i <= 10; i++) {
-        if (mangSoNguyen[i]== soNguyen ){
+        if (mangSoNguyen[i] == soNguyen) {
             document.write(soNguyen + ' ' + 'is in the array');
             dem = 0;
             break;
-        }else {
+        } else {
             dem++;
         }
     }

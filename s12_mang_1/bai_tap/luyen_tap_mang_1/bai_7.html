@@ -6,22 +6,22 @@
 </head>
 <body>
 <script>
-    let mang = [1,2,3,4,5,6,7,8,9,10];
-    let number=+prompt('nhập 1 số vào');
-    let xoa = true;
-    let mangnew = []
-    for (let i=0;i<10;i++){
-        if(mang[i] == number){
-            xoa =false;
-        }
-        if (mang[i] !=number){
-            mangnew.push(mang[i]);
+    let int = [];
+    for (let i = 0; i < 10; i++) {
+        int[i] = Number(prompt("Nhập phần tử:"));
+    }
+    document.write("Mảng mới nhập là :" + " " + int + "<br>");
+    let number = +prompt("Nhập số nguyên V:");
+    document.write("Số mới  nhập vào là:" + " " + number + "<br>");
+    let count = 0;
+    let result = [];
+    for (let j = 0; j < int.length; j++) {
+        if (number !== int[j]) {
+            count = 1;
+            result.push(int[j]);
         }
     }
-    document.write("mang = ["+mang+"]<br>");
-    if(xoa == false){
-        document.write("Đã xóa phần tử"+' '+number+'. ' +"mang = ["+mangnew+"]");
-    }
+    document.write("Mảng mới :" + " " + result);
 </script>
 </body>
 </html>
