@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangKiTu = ['h', '_', 'h', '_', '*', '_', 'a', '_', '$'];
+    let mangMoi = [];
+    for (let i = 0; i < mangKiTu.length; i++) {
+        if (mangKiTu[i] == "-") {
+            mangKiTu[i] == "_";
+            mangMoi.push("_");
+        } else {
+            mangMoi.push(mangKiTu[i]);
+        }
+    }
+    document.write(mangMoi.join(""));
+
+</script>
+</body>
+</html>
