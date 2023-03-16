@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soThuNhat = +prompt("Nhập số thứ nhất");
+    let soThuHai = +prompt("Nhập số thứ hai");
+    let total;
+
+    function thamSo(a, b) {
+        if (a > b) {
+            alert("Số thứ nhất lớn hơn số thứ hai");
+        } else {
+            return a + b;
+        }
+    }
+    total = thamSo(soThuNhat, soThuHai);
+    if (total) {
+        document.write("Tổng 2 số là" +" "+total);
+    }
+</script>
+</body>
+</html>

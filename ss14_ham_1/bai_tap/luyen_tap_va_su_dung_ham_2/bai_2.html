@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhChuVi(x) {
+        let chuvi = x * 2 * Math.PI;
+        return chuvi;
+    }
+    function tinhDienTich(x) {
+        let dienTich = x * x * Math.PI;
+        return dienTich;
+    }
+    let banKinh = +prompt("Nhập bán kính hình tròn");
+    let chuVi = tinhChuVi(banKinh);
+    document.write("Chu vi hình tròn có bán kính " + banKinh + "=" + chuVi+"<br>");
+    let dienTich = tinhDienTich(banKinh);
+    document.write("Diện tích hình tròn có bán kính " + banKinh + "=" + dienTich);
+
+</script>
+</body>
+</html>

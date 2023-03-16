@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Chọn 1 số <input id="numbers" type="number"
+oninput="doiSo(this.value)"
+onchange="doiSo(this.value)"><br>
+<p id="text">Giá trị trả về</p>
+<script>
+    function doiSo(soDuocChon) {
+        soDuocChon++;
+        document.getElementById("text").innerHTML =  ("Giá trị hiển thị:" +soDuocChon);
+    }
+
+</script>
+</body>
+</html>
