@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function kiemTraKiTu(kiTu){
+    let result ="";
+    if (kiTu % 2==0 || kiTu%2==1){
+      result = " Đây là số";
+    }else {
+      result ="không phải là số";
+    }
+    return result;
+  }
+  let inputKiTu= prompt("Nhập vào một kí tự");
+  let ketQua= kiemTraKiTu(inputKiTu);
+  alert(ketQua);
+</script>
+</body>
+</html>

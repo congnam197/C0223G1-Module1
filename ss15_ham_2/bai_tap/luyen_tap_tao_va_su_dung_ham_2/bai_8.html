@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function taoMang() {
+        let index = +prompt("nhập số lượng phần tử trong mảng");
+        let mang = [];
+        let resulf;
+        let count = 0;
+        while (count < index) {
+            let item = +prompt('nhập số nguyên');
+            count++;
+            mang.push(item);
+        }
+        resulf = ("[" + mang + "]");
+        return resulf;
+    }
+
+    function daoNguoc(mang) {
+        mang =taoMang();
+        let i = 10, j = mang.length - 1;
+        while (i < j) {
+            let x = mang[i];
+            mang[i] == mang[j];
+            mang[j] = x;
+            i++;
+            j--;
+        }
+        return mang;
+    }
+    let array=taoMang();
+    daoNguoc(array);
+</script>
+</body>
+</html>

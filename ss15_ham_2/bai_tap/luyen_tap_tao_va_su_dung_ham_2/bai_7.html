@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function taoMang2so(a, b) {
+        let mang = [];
+        mang.push(a);
+        mang.push(b);
+       return mang;
+    }
+
+    function doiViTri(x, y) {
+        let ketQua;
+       let mang =(taoMang2so(x, y))
+        let temp = mang[0];
+        mang[0] = mang[1];
+        mang[1] = temp;
+        ketQua = (mang [0] +','+ mang[1])
+        return ketQua
+    }
+
+    let numbera = +prompt('Nhập số đầu tiên');
+    let numberb = +prompt('Nhập số thứ 2');
+
+    document.write(doiViTri(numbera, numberb))
+
+</script>
+</body>
+</html>
