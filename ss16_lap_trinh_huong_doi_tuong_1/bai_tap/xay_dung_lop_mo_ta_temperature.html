@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let temperature = function (c){
+    this.doC=c;
+    this.getdoC=function (){
+      return this.doC
+    }
+    this.getdoF=function (){
+      return c*1.8+32;
+    }
+    this.getdoKenvin=function (){
+      return c+273.15;
+    }
+  }
+  let chuyenDoiNhietDo=new temperature(25);
+  let doC=chuyenDoiNhietDo.getdoC();
+  let doF=chuyenDoiNhietDo.getdoF();
+  let doKenVin=chuyenDoiNhietDo.getdoKenvin();
+  document.write("Độ C :" +doC+"<br>" +"Nhiệt độ F : " + doF + "<br>" + "Nhiệt độ K : "+doKenVin );
+</script>

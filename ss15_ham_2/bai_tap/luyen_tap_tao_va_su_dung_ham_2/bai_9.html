@@ -6,36 +6,33 @@
 </head>
 <body>
 <script>
-    function taoMangKiTu() {
-        let mang = [];
-        let count = 0;
-        let soKiTu = +prompt("nhập số lượng kí tự");
-        while (count < soKiTu) {
-            kiTu = prompt('Nhập kí tự');
-            count++;
-            mang.push(kiTu);
-        }
-        return mang;
-    }
 
-    function kiemTra(a){
-    let mang = "[" + taoMangKiTu() + "]";
-    let dem = 0;
-    for (let i = 0; i < mang.length; i++) {
-        if (a == mang[i]) {
-            dem++;
-        } else {
-            i++;
-        }
+    let mangMoi = [];
+    let count = 0;
+    let soKiTu = +prompt("nhập số lượng kí tự");
+    while (count < soKiTu) {
+        let kiTu = prompt('Nhập kí tự');
+        count++;
+        mangMoi.push(kiTu);
     }
-    if (dem!=0) {
-        return -1
-    } else {
+    console.log("[" + mangMoi + "]");
+
+    function kiemTra(a, mang = []) {
+        let dem = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if (a === mang[i]) {
+                dem++;
+            }
+        }
+        if (dem === 0) {
+            dem = -1;
+        }
         return dem;
     }
-    }
-    let kiTu=prompt("Nhập kí tự cần kiểm tra");
-    alert(kiemTra(kiTu));
+
+    let kiTuCanKiemTra = prompt("nhập kí tự cần kiểm tra");
+    let ketQua = kiemTra(kiTuCanKiemTra, mangMoi);
+    console.log(ketQua);
 </script>
 </body>
 </html>

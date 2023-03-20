@@ -6,34 +6,24 @@
 </head>
 <body>
 <script>
-    function taoMang() {
+
         let index = +prompt("nhập số lượng phần tử trong mảng");
-        let mang = [];
+        let taoMang = [];
         let resulf;
         let count = 0;
         while (count < index) {
             let item = +prompt('nhập số nguyên');
             count++;
-            mang.push(item);
+            taoMang.push(item);
         }
-        resulf = ("[" + mang + "]");
-        return resulf;
-    }
+        resulf = ("[" + taoMang + "]");
 
-    function daoNguoc(mang) {
-        mang =taoMang();
-        let i = 10, j = mang.length - 1;
-        while (i < j) {
-            let x = mang[i];
-            mang[i] == mang[j];
-            mang[j] = x;
-            i++;
-            j--;
-        }
+    function daoNguoc(mang=[]) {
+        mang.reverse();
         return mang;
     }
-    let array=taoMang();
-    daoNguoc(array);
+
+        console.log(daoNguoc(taoMang));
 </script>
 </body>
 </html>

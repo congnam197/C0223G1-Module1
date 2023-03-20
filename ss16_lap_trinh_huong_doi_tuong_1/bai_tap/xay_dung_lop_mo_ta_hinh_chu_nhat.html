@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="688px" height="468px" style="border: 1px solid #d3d3d3 "></canvas>
+<p id="ketQua"></p>
+</body>
+</html>
+<script>
+
+
+    let Rectangle = function (chieudai, chieurong) {
+        this.chieudai = chieudai;
+        this.chieurong = chieurong;
+        this.getchieuDai = function () {
+            return this.chieudai;
+        }
+        this.getchieuRong = function () {
+            return this.chieurong;
+        }
+        this.setchieuDai = function (chieudai) {
+            this.chieudai = chieudai;
+        }
+        this.setchieuRong = function (chieurong) {
+            this.chieurong = chieurong;
+        }
+        this.getdienTich = function () {
+            return chieuDai * chieuRong;
+        }
+        this.getchuVi = function () {
+            return (chieuDai + chieuRong) * 2;
+        }
+    };
+    let rectangle = new Rectangle();
+    let setChieuDai = rectangle.setchieuDai(500);
+    let setChieurong = rectangle.setchieuRong(368);
+    let chieuDai = rectangle.getchieuDai();
+    let chieuRong = rectangle.getchieuRong();
+    let dienTich = rectangle.getdienTich();
+    let chuVi = rectangle.getchuVi();
+    document.getElementById("ketQua").innerHTML = "Diện tích hình chữ nhật là : " + dienTich + " " + "Chu vi hình chữ nhật : " + chuVi + "<br>"
+        + "Chiều dài : " + chieuDai + " " + "Chiều rộng :" + chieuRong;
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#fa4b2a";
+    ctx.fillRect(50, 50, chieuDai, chieuRong);
+</script>
