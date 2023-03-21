@@ -9,21 +9,33 @@
 </body>
 </html>
 <script>
-  let temperature = function (c){
-    this.doC=c;
-    this.getdoC=function (){
-      return this.doC
+    class Teamperature {
+
+        constructor(celcius) {
+            this.celcius = celcius;
+        }
+
+
+        fahrenheit() {
+            let fahrenheit = "";
+            this.fahrenheit = fahrenheit;
+            return this.celcius * 1.8 + 32;
+        }
+
+        kenvin() {
+            let kenvin = "";
+            this.kenvin = kenvin;
+            return this.celcius + 273.15;
+        }
     }
-    this.getdoF=function (){
-      return c*1.8+32;
+
+    let inputCelcius = "";
+    while (inputCelcius < -273.15) {
+        inputCelcius = +prompt("Nhiệt độ quá thấp")
     }
-    this.getdoKenvin=function (){
-      return c+273.15;
-    }
-  }
-  let chuyenDoiNhietDo=new temperature(25);
-  let doC=chuyenDoiNhietDo.getdoC();
-  let doF=chuyenDoiNhietDo.getdoF();
-  let doKenVin=chuyenDoiNhietDo.getdoKenvin();
-  document.write("Độ C :" +doC+"<br>" +"Nhiệt độ F : " + doF + "<br>" + "Nhiệt độ K : "+doKenVin );
+    let temperature = new Teamperature(inputCelcius);
+    let celcius = temperature.celcius;
+    let fahrenheit = temperature.fahrenheit();
+    let kenvin = temperature.kenvin();
+    document.write("Nhiệt độ C : " + celcius + "<br>" + "Nhiệt độ F: " + fahrenheit + "<br>" + "Nhiệt độ K : " + kenvin);
 </script>

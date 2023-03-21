@@ -6,45 +6,40 @@
 </head>
 <body>
 <canvas id="myCanvas" width="688px" height="468px" style="border: 1px solid #d3d3d3 "></canvas>
-<p id="ketQua"></p>
+<p id="result"></p>
 </body>
 </html>
 <script>
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
 
+        perimeter() {
+            let perimeter="";
+            this.perimeter = perimeter;
+            return (this.height + this.width) * 2;
+        }
 
-    let Rectangle = function (chieudai, chieurong) {
-        this.chieudai = chieudai;
-        this.chieurong = chieurong;
-        this.getchieuDai = function () {
-            return this.chieudai;
+        area() {
+            let area="";
+            this.area = area;
+            return this.height * this.width;
         }
-        this.getchieuRong = function () {
-            return this.chieurong;
-        }
-        this.setchieuDai = function (chieudai) {
-            this.chieudai = chieudai;
-        }
-        this.setchieuRong = function (chieurong) {
-            this.chieurong = chieurong;
-        }
-        this.getdienTich = function () {
-            return chieuDai * chieuRong;
-        }
-        this.getchuVi = function () {
-            return (chieuDai + chieuRong) * 2;
-        }
-    };
-    let rectangle = new Rectangle();
-    let setChieuDai = rectangle.setchieuDai(500);
-    let setChieurong = rectangle.setchieuRong(368);
-    let chieuDai = rectangle.getchieuDai();
-    let chieuRong = rectangle.getchieuRong();
-    let dienTich = rectangle.getdienTich();
-    let chuVi = rectangle.getchuVi();
-    document.getElementById("ketQua").innerHTML = "Diện tích hình chữ nhật là : " + dienTich + " " + "Chu vi hình chữ nhật : " + chuVi + "<br>"
-        + "Chiều dài : " + chieuDai + " " + "Chiều rộng :" + chieuRong;
+    }
+    let inputHeight=+prompt("Nhập chiều cao");
+    let inputWith=+prompt("Nhập chiều rộng");
+    let aRectangle = new Rectangle(inputHeight,inputWith);
+    let heightRectangle = aRectangle.height;
+    let widthRectangle = aRectangle.width;
+    let perimeterRetangle = aRectangle.perimeter();
+    let areaRectangle = aRectangle.area();
+    document.getElementById("result").innerHTML = ("Chiều cao hình chữ nhật là:" + heightRectangle + " Chiều rộng hình chữ nhật là:" + widthRectangle + "<br>" +
+        "Diện tích hình chữ nhật là :" + areaRectangle + " Chu vi hình chữ nhật là " + perimeterRetangle);
     let canvas = document.getElementById("myCanvas");
     let ctx = canvas.getContext("2d");
     ctx.fillStyle = "#fa4b2a";
-    ctx.fillRect(50, 50, chieuDai, chieuRong);
+    ctx.fillRect(50, 50,heightRectangle ,widthRectangle )
+
 </script>

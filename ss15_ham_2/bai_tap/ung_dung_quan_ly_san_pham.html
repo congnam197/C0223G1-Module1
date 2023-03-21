@@ -6,33 +6,58 @@
 </head>
 <body>
 <h2>Add New Product</h2>
-<form onsubmit="">
-    <input type="text" placeholder="New Product">
-    <button type="submit">Add</button>
+<form>
+    <input id="newProduct" type="text" placeholder="New Product">
+    <button type="button" onclick="productAdd()">Add</button>
 </form>
 <h2>Display All Product</h2>
-<table border="1" cellspacing="0" >
-    <tr>
-        <th width="50">STT</th>
-        <th width="200">Name Product</th>
-        <th colspan="2" width="120">Action</th>
-    </tr>
-    <tbody id="product"></tbody>
-</table>
+<p id="display"></p>
 <br><br>
 <form>
     <input type="text" placeholder="Edit Product">
-    <button type="submit">Edit</button>
+    <button type="button">Edit</button>
 </form>
 
 <script>
-function Phone(){
-this.listPhone=["Apple","Oppo","SamSung","Xaomi","NoKia","Redmi"];
-this.product=document.getElementById("product")
-    this.count
+    let productArray = ["Nokia", "Sam Sung", "Oppo", "Iphone"];
+    function productAdd() {
+        let productName = document.getElementById("newProduct").value;
+        productArray.push(productName);
+        document.getElementById("newProduct").value = "";
+        displayProducts()
+    }
+
+    function deleteByIndex(index) {
+        let deleteConf = confirm("Bạn có muốn xóa sản phẩm" + productArray[index] + "không???")
+        if (deleteConf) {
+            productArray.splice(index, 1)
+        }
+        displayProducts()
+
+    }
+
+    function displayProducts() {
+        let tableString = "<table border='1' cellSpacing='0' >\n" +
+            "<tr>\n" +
+            "<th width='50'>STT</th>\n" +
+            "<th width='200'>Name Product</th>\n" +
+            "<th colSpan='2' width='120'>Action</th>\n" +
+            "</tr>"
+        for (let i = 0; i < productArray.length; i++) {
+            tableString += "<tr>\n" +
+                "<td>" + (i + 1) + "</td>\n" +
+                "<td>" + productArray[i] + "</td>\n" +
+                "<td><button type='button' onclick='editByIndex(" + i + ")'>Edit</button></td>" +
+                "<td><button type='button' onclick='deleteByIndex(" + i + ")'>Delete</button></td>" +
+                "</tr>"
+        }
+        tableString += "</table>";
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    displayProducts()
 
 
-}
 </script>
 </body>
 </html>
