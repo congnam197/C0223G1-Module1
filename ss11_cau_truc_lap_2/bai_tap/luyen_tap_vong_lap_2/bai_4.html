@@ -5,28 +5,19 @@
     <title>Hình chữ nhật</title>
 </head>
 <body>
-
-
-</p>
 <script>
-     let a='';
-     for (let i = 1; i<=10; i++) {
-       for (let j = 1; j <= 30; j++) {
-
-        if (i == 1 || i == 10) {
-          document.write("<a style=\"color: black\">*</a>");
-
-        } else {
-          document.write("<a style=\"color: white\">*</a>");
+    let height = +prompt("Nhập chiều cao");
+    let weight = +prompt("Nhập chiều rộng");
+    for (let i = 1; i <= height; i++) {
+        for (let j = 1; j <= weight; j++) {
+            if (i == 1 || i == height || j == 1 || j == weight) {
+                document.write("*");
+            } else {
+                document.write("&nbsp;&nbsp");
+            }
         }
-        if (j == 1|| j == 30) {
-         document.write("<a style=\"color: black\">*</a>");
-         }
-      }
-      document.write('<br>');
+        document.write("<br>");
     }
-
-
 </script>
 </body>
 </html>
