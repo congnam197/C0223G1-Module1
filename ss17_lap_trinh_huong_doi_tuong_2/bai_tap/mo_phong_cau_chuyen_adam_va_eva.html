@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Adam & Eva</h2>
+<button onclick="eatApple()">Eat Apple</button>
+<p id="adam"></p>
+<p id="eva"></p>
+<p id="actionAdam"></p>
+<p id="actionEva"></p>
+<p id="apple"></p>
+<p id="eva2"></p>
+</body>
+</html>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weightApple = weight;
+        }
+
+        getWeightApple() {
+            return this.weightApple;
+        }
+
+        decrease() {
+             if (this.weightApple <= 0) {
+                 this.weightApple = 0;
+             } else {
+                 this.weightApple--;
+            }
+        }
+        isEmpty() {
+            if (this.weightApple <= 0) {
+                return true;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weightHuman) {
+            this.name = name;
+            this.gender = gender;
+            this.weightHuman = weightHuman;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        getWeightHuman() {
+            return this.weightHuman;
+        }
+
+        say(txt) {
+            return txt;
+        }
+
+        eatApple(apple) {
+            if (apple.isEmpty()) {
+                alert("Hết táo mất rồi");
+            } else {
+                apple.decrease();
+                this.weightHuman++;
+            }
+        }
+    }
+
+    let adam = new Human("Adam", "Male", 76);
+    let eva = new Human("Eva", "Female", 48);
+    let apple = new Apple(10);
+
+    function eatApple() {
+        adam.eatApple(apple);
+        eva.eatApple(apple);
+        document.getElementById("adam").innerHTML = "Adam said:" + adam.say(" Hello Eva! Would you like eating apple with me?");
+        document.getElementById("eva").innerHTML = "Eva said:" + eva.say(" Hi Adam! Yes, Give me");
+        document.getElementById("actionAdam").innerHTML = " Adam ăn táo, cân nặng của Adam " + adam.getWeightHuman() + " đơn vị";
+        document.getElementById("actionEva").innerHTML = "Eva ăn táo, cân nặng của Eva " + eva.getWeightHuman() + " đơn vị";
+        document.getElementById("apple").innerHTML = "  Táo còn lại :" + apple.getWeightApple()+" đơn vị";
+        document.getElementById("eva2").innerHTML = " Eva said:" + eva.say("You are nice! I love You! moazzz");
+    }
+</script>
