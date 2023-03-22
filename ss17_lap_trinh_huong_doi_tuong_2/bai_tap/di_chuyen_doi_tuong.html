@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+  </head>
+  <body>
+    <div id="game"></div>
+  </body>
+</html>
+<script>
+  let Hero = function(image, top, left, size) {
+    this.image = image
+    this.top = top || 0
+    this.left = left || 0
+    this.size = size || 100
+
+    this.stopRight = false
+    this.stopBottom = true
+    this.stopLeft = true
+    this.stopTop = true
+
+    this.getHeroElement = function () {
+      return '<img width="' + this.size + '"' +
+              ' height="' + this.size + '"' +
+              ' src="' + this.image + '"' +
+              ' style="position:absolute;top: ' + this.top + 'px; left:' + this.left + 'px;" />'
+    }
+
+    this.moveRight = function (so) {
+      this.left += so;
+      console.log('left: ' + this.left);
+    }
+
+    this.moveBottom = function (so) {
+      this.top += so;
+      console.log("bottom: " + this.top)
+    }
+  }
+
+  let hero = new Hero('doraemon.jpg', 0, 0, 200);
+
+  function start1() {
+    if (hero.left < window.innerWidth - hero.size && hero.stopRight == false && hero.stopTop && hero.stopLeft && hero.stopBottom) {
+      hero.moveRight(50)
+    } else {
+      hero.stopRight = true
+      hero.stopBottom = false
+    }
+
+    if (hero.top < window.innerHeight - hero.size && hero.stopRight && hero.stopTop && hero.stopBottom == false) {
+      hero.moveBottom(50)
+    } else {
+      hero.stopBottom = true
+      hero.stopLeft = false
+    }
+
+    if (hero.left > 0 && hero.stopRight && hero.stopBottom && hero.stopLeft == false) {
+      hero.moveRight(-50);
+    } else {
+      hero.stopLeft = true
+      hero.stopTop = false
+    }
+    //
+    if (hero.top > 0 && hero.stopBottom && hero.stopLeft && hero.stopTop == false) {
+      hero.moveBottom(-50);
+    } else {
+      hero.stopTop = true
+      hero.stopRight = false
+    }
+    //
+    setTimeout(start1, 100)
+    document.getElementById('game').innerHTML = hero.getHeroElement();
+  }
+  start1()
+</script>
