@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let numerators = [5, 2, 5];
+  let denominators = [6, 3, 4];
+  let max=numerators[0]/denominators[0];
+  let index=0
+  for (let i = 0; i < numerators.length; i++) {
+    for (let j = 0; j < denominators.length; j++) {
+      if (i==j){
+        let result=numerators[i]/denominators[j];
+        result>max;
+        max=result;
+        index=i
+      }
+    }
+  }
+  document.write("maxFraction(numerators, denominators) = "+index)
+</script>

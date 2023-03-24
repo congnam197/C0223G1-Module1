@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập tổng thu nhập: <input id="income" type="text" placeholder="triệu đồng"></label>
+<button onclick="costCalculation()">Tính</button>
+<p id="tax"></p>
+<p id="salary"></p>
+</body>
+<script>
+    function costCalculation() {
+
+        let totalIncome = document.getElementById("income").value;
+        let taxMoney;
+        let salary;
+        if (totalIncome >= 15) {
+            taxMoney = totalIncome * 15 / 100;
+
+        } else if (totalIncome >= 7) {
+            taxMoney = totalIncome * 10 / 100;
+
+        } else {
+            taxMoney = totalIncome * 5 / 100;
+        }
+        salary = totalIncome - taxMoney;
+
+        document.getElementById("tax").innerHTML = "Tiền thuế bạn phải đóng : " + taxMoney + " triệu đồng";
+        document.getElementById("salary").innerHTML = "Số tiền thực nhận là : " + salary + " triệu đồng";
+    }
+</script>
+</html>

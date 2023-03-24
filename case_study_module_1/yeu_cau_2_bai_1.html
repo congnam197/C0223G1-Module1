@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = +prompt("Enter the height");
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (i === 1 || i === n || j === 1 || j === i) {
+                document.writeln(" * ");
+            } else {
+                document.writeln("&nbsp;&nbsp");
+            }
+        }
+        document.writeln("<br>");
+    }
+
+
+</script>

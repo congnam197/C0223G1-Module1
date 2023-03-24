@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<p id="value"></p><br>
+<p id="menu"></p>
+</body>
+</html>
+<script>
+    let menuDrinks = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa","Thoát"];
+class MenuDrinks{
+    constructor(id,name) {
+        this.id=id;
+        this.name=name;
+    }
+}
+    function displayDrinks() {
+        let tableString = "<table border='1' cellspacing='0' >" +
+            "<tr>" +
+            "<th>STT</th>" +
+            "<th>Tên Đồ Uống</th>" +
+            "<th></th>" +
+            "</tr>"
+        for (let i = 0; i < menuDrinks.length; i++) {
+            tableString += "<tr>" +
+                "<td>" +(i+1) + "</td>" +
+            "<td>" + menuDrinks[i] + "</td>" +
+            "<td><button onclick='valueDrinks()'>" + "Chọn" + "</button></td>" +
+            "</tr>"
+        }
+        tableString += "</table>"
+        document.getElementById("menu").innerHTML = tableString;
+    }
+    displayDrinks();
+
+function valueDrinks() {
+    do {
+        switch (menuDrinks.id+1){
+            case 1:
+                document.getElementById("value").innerHTML="7.000"
+        }
+    }while(menuDrinks)
+}
+
+
+
+</script>
