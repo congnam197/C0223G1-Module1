@@ -25,15 +25,18 @@
     let array = [];
 
     class Students {
-        constructor(id, name, classStudent, email, dateOfBirth,module) {
+        constructor(id, name, classStudent, email, dateOfBirth, module) {
             this.id = id;
             this.name = name;
             this.classStudent = classStudent;
             this.email = email;
             this.dateOfBirth = dateOfBirth;
-            this.module=module
+            this.module = module
         }
     }
+
+    let array1 = new Students("HV-4983", "Phạm Công Nam", "C0223G1", "namhung024@gmail.com", "02/02/1997", "Module 1")
+    array.push(array1);
 
     function addStudent() {
         let id = prompt("Nhập id học viên");
@@ -42,7 +45,7 @@
         let email = prompt("Nhập email học viên");
         let dateOfBirth = prompt("Nhập ngày sinh học viên");
         let module = prompt("Nhập module học viên đang học ");
-        let student = new Students(id, name, classStudent, email, dateOfBirth,module);
+        let student = new Students(id, name, classStudent, email, dateOfBirth, module);
         array.push(student);
         displayStudents();
     }
@@ -53,7 +56,7 @@
             if (id !== array[i].id) {
                 alert("mã học viên không tồn tại");
             } else {
-                array[i].name= prompt("Nhập lại tên học viên");
+                array[i].name = prompt("Nhập lại tên học viên");
                 array[i].classStudent = prompt("Nhập lại lớp học viên");
                 array[i].email = prompt("Nhập lai email học viên");
                 array[i].dateOfBirth = prompt("Nhập lại ngày sinh học viên");
@@ -64,18 +67,15 @@
     }
 
     function DeleteStudent() {
-         let indexStudent=prompt("Nhập id học viên muốn xóa");
-         let flag=true;
+        let indexStudent = prompt("Nhập mã học viên muốn xóa");
+        let flag = false;
         for (let i = 0; i < array.length; i++) {
-            if (indexStudent == array[indexStudent].id) {
-                flag=true;
-            } else {
-                flag=false;
-                alert("Học viên không tồn tại");
+            if (indexStudent == array[i].id) {
+                flag = true;
             }
         }
-        if (flag){
-            let deleteInfo = confirm("Bạn có muốn xóa học viên" + array[indexStudent].name + " này không?");
+        if (flag) {
+            let deleteInfo = confirm("Bạn có muốn xóa học viên này không?");
             if (deleteInfo) {
                 array.splice(indexStudent, 1);
                 displayStudents(array);
@@ -83,8 +83,9 @@
             } else {
                 alert("Giữ nguyên học viên");
             }
+        } else {
+            alert("Học viên không tồn tại")
         }
-
     }
 
     function displayStudents() {
@@ -111,5 +112,5 @@
         document.getElementById("display").innerHTML = tableString;
     }
 
-    displayStudents()
+    displayStudents();
 </script>
