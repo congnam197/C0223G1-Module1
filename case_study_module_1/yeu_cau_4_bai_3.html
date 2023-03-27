@@ -9,14 +9,23 @@
 </body>
 </html>
 <script>
-  let s1="aabcc";
-  let s2="adcaa";
-  for (let i = 0; i < s1.length; i++) {
-    for (let j = 0; j < s2.length; j++) {
-      if (s1[i]===s2[j]){
-        s1.slice(i,1);
+  let array1="aabcc";
+  let array2="adcaa";
+  let array3 = array1.split("");
+  let array4 = array2.split("");
+  let array = [];
+  let count = 0;
+  for (let i = 0; i < array3.length; i++) {
+      for (let j = 0; j < array4.length; j++) {
+          if (array3[i] === array4[j]) {
+              array.push(array3[i]);
+              array3.splice(i, 1);
+              array4.splice(j, 1);
+              count++;
+              i--;
+              break;
+          }
       }
-    }
   }
-  console.log(s1);
+  document.write("Có "+count+" ký tự chung, các ký tự đó là: "+array);
 </script>

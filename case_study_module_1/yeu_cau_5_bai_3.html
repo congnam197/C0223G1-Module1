@@ -9,30 +9,22 @@
 </body>
 </html>
 <script>
-    let m = +prompt("Nhâp m:");
-    let n = +prompt("Nhập n:");
-    let arr = [];
-    for (let i = 0; i < m; i++) {
-        arr[i] = [];
-        for (let j = 0; j < n; j++) {
-            arr[i][j] = +prompt("Nhập phần tử thứ " + (i + 1) + "-" + (j + 1));
-        }
-    }
-    document.write("Ma trận đã nhập: " + "<br>");
-    for (let k = 0; k < m; k++) {
-        document.write(arr[k] + "<br>");
-    }
-    let max = arr[0][0];
-    let min = arr[0][0];
-    for (let x = 0; x < m; x++) {
-        for (let y = 0; y < n; y++) {
-            if (arr[x][y] > max) {
-                max = arr[x][y];
+
+   let array = [
+        [13, 4, 8, 14, 1],
+        [9, 6, 3, 7, 21]
+       ];
+    let max = array[0][0];
+    let min = array[0][0];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (array[i][j] > max) {
+                max = array[i][j];
             }
-            if (arr[x][y] < min) {
-                min = arr[x][y];
+            if (array[i][j] < min) {
+                min = array[i][j];
             }
         }
     }
-    document.write(max + "<br>" + min);
+    document.write("Giá trị lớn nhất trong mảng là : " +max + "<br>"+"Giá trị nhỏ nhất trong mảng là : " + min);
 </script>

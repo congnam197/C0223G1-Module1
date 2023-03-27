@@ -9,33 +9,22 @@
 </body>
 </html>
 <script>
-  let m = +prompt("Nhâp m:");
-  let n;
-  let arr = [];
-  for (let i = 0; i < m; i++) {
-    arr[i] = [];
-    n = +prompt("Nhập n:");
-    for (let j = 0; j < n; j++) {
-      arr[i][j] = +prompt("Nhập phần tử thứ " + (i + 1) + "-" + (j + 1));
-    }
-  }
-  document.write("Ma trận đã nhập: " + "<br>");
-
-  for (let k = 0; k < m; k++) {
-    document.write(arr[k] + "<br>");
-  }
+  let numbers = [
+      [5, 12, 17, 9, 13],
+      [21, 41, 8, 19, 1]
+  ];
   let count = 0;
   let counter = 0;
   let arr1 = [];
-  for (let h = 0; h < m; h++) {
-    for (let l = 0; l < n; l++) {
-      for (let i = 1; i <= arr[h][l]; i++) {
-        if (arr[h][l] % i === 0) {
+  for (let i = 0; i <numbers.length; i++) {
+    for (let j = 0; j < numbers[i].length; j++) {
+      for (let k = 1; k <= numbers[i][j]; k++) {
+        if (numbers[i][j] % k ==0) {
           count++;
         }
       }
       if (count === 2) {
-        arr1.push(arr[h][l]);
+        arr1.push(numbers[i][j]);
         counter++;
       }
       count = 0;
