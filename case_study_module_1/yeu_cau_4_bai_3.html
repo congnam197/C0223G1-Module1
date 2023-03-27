@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let s1="aabcc";
+  let s2="adcaa";
+  for (let i = 0; i < s1.length; i++) {
+    for (let j = 0; j < s2.length; j++) {
+      if (s1[i]===s2[j]){
+        s1.slice(i,1);
+      }
+    }
+  }
+  console.log(s1);
+</script>
