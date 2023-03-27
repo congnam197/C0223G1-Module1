@@ -10,25 +10,24 @@
 </html>
 <script>
     let m = +prompt("Nhâp m:");
-    let n;
+    let n = +prompt("Nhập n:");
     let arr = [];
     let sum = 0;
     for (let i = 0; i < m; i++) {
         arr[i] = [];
-        n = +prompt("Nhập n:");
         for (let j = 0; j < n; j++) {
-            arr[i][j] = +prompt("Nhập phần tử thứ " + (i + 1) + "-" + (j + 1));
+            arr[i][j] = +prompt("Nhập phần tử " + "[" + i + "]" + "[" + j + "]");
         }
     }
     document.write("Ma trận đã nhập: " + "<br>");
-    
+
     for (let k = 0; k < m; k++) {
         document.write(arr[k] + "<br>");
     }
-    
+
     for (let h = 0; h < m; h++) {
         for (let l = 0; l < arr[h].length; l++) {
-            if (arr[h][l] % 2 === 0) {
+            if (arr[h][l] % 2 == 0) {
                 sum = sum + arr[h][l];
             }
         }

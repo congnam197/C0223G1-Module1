@@ -9,12 +9,12 @@
 </body>
 </html>
 <script>
-  let symbols=prompt("Nhập xâu kí tự");
-  let newArray=[];
-  for (let i = 0; i <symbols.length; i++) {
-   if (newArray.indexOf(symbols[i])==-1){
-       newArray.push(symbols[i])
+    let symbols = prompt("Nhập xâu kí tự");
+    let newArray = [];
+    for (let i = 0; i < symbols.length; i++) {
+        if (newArray.indexOf(symbols[i]) == -1) {
+            newArray.push(symbols[i])
+        }
     }
-  }
-  document.write("Có "+ newArray.length+ " kí tự giống nhau là : "+ newArray);
+    document.write("Có " + newArray.length + " kí tự giống nhau là : " + newArray);
 </script>

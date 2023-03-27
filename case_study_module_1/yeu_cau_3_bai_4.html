@@ -24,7 +24,7 @@
             tableString += "<tr>" +
                 "<td>" + (i + 1) + "</td>" +
                 "<td>" + menuDrinks[i] + "</td>" +
-                "<td><button onclick='choose("+i+")'>" + "Chọn" + "</button></td>" +
+                "<td><button onclick='choose(" + i + ")'>" + "Chọn" + "</button></td>" +
                 "</tr>"
         }
         tableString += "</table>"
@@ -35,7 +35,7 @@
 
     function choose(index) {
         let flag = true;
-        for (let i = 1; i <=menuDrinks.length; i++) {
+        for (let i = 1; i <= menuDrinks.length; i++) {
             if (index = menuDrinks.indexOf(menuDrinks[i]) == -1) {
                 flag = true;
                 break;
