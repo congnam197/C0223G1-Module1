@@ -11,26 +11,28 @@
 <script>
     let m = +prompt("Nhâp m:");
     let n = +prompt("Nhập n:");
-    let arr = [];
+    let array = [];
     let sum = 0;
     for (let i = 0; i < m; i++) {
-        arr[i] = [];
+        array[i] = [];
         for (let j = 0; j < n; j++) {
-            arr[i][j] = +prompt("Nhập phần tử " + "[" + i + "]" + "[" + j + "]");
+            array[i][j] = +prompt("Nhập phần tử " + "[" + i + "]" + "[" + j + "]");
         }
     }
-    document.write("Ma trận đã nhập: " + "<br>");
-
+    document.write("Ma trận đã nhập: [ " + "<br>");
     for (let k = 0; k < m; k++) {
-        document.write(arr[k] + "<br>");
+        document.write(array[k] +"<br>");
     }
-
-    for (let h = 0; h < m; h++) {
-        for (let l = 0; l < arr[h].length; l++) {
-            if (arr[h][l] % 2 == 0) {
-                sum = sum + arr[h][l];
+    document.write("]"+"<br>")
+    totalArray(array);
+function totalArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 == 0) {
+                sum = sum + arr[i][j];
             }
         }
     }
     document.write("Tổng các số chẵn trong ma trận trên là " + sum);
+}
 </script>

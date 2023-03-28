@@ -9,22 +9,25 @@
 </body>
 </html>
 <script>
+    function findMinMax(array) {
+        let max = array[0][0];
+        let min = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+            }
+        }
+        document.write("Giá trị lớn nhất trong mảng là : " + max + "<br>" + "Giá trị nhỏ nhất trong mảng là : " + min);
+    }
 
-    let array = [
+    let numbersArray = [
         [13, 4, 8, 14, 1],
         [9, 6, 3, 7, 21]
     ];
-    let max = array[0][0];
-    let min = array[0][0];
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array[i].length; j++) {
-            if (array[i][j] > max) {
-                max = array[i][j];
-            }
-            if (array[i][j] < min) {
-                min = array[i][j];
-            }
-        }
-    }
-    document.write("Giá trị lớn nhất trong mảng là : " + max + "<br>" + "Giá trị nhỏ nhất trong mảng là : " + min);
+    findMinMax(numbersArray);
 </script>
