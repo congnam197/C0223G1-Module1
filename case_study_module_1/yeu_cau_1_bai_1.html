@@ -22,8 +22,10 @@
         } else if (totalIncome >= 7) {
             taxMoney = totalIncome * 10 / 100;
 
-        } else {
+        } else if (totalIncome>0){
             taxMoney = totalIncome * 5 / 100;
+        }else {
+            console.log("Bạn hãy đi làm đi");
         }
         salary = totalIncome - taxMoney;
 
