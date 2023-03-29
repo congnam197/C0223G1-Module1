@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = +prompt("Nhập số phần tử trong mảng");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("nhập phần tử thứ :" + (i + 1));
+    }
+    document.write("Mảng vừa nhập" + "[" + array + "]" + "<br>");
+    let sum = 0;
+    for (let i = 1; i < array.length; i += 2) {
+        if (array[i] % 2 == 0) {
+            sum += array[i];
+        }
+    }
+    document.write("tổng các số chẵn ở vị trí lẻ là " + sum);
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = +prompt("Nhập số lượng phần tử");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("Nhập phần tử thứ :" + (i + 1));
+    }
+    document.write("Mảng vừa nhập :" + array);
+    let flag=true;
+    for (let i = 0; i < n; i++) {
+        if (array[0]!==array[n-1]){
+            flag=true;
+        }else {
+            if(array[i]==array[n-i-1]){
+                flag=false;
+            }else {
+                flag=true;
+            }
+
+        }
+
+    }
+    if (flag){
+        alert("No");
+    }else {
+        alert("Yes");
+    }
+</script>

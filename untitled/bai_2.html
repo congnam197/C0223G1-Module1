@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function creatNewWord(str) {
+        let array = [];
+        let newArr = [];
+        str = str.toLowerCase();
+        array = str.split("");
+        if (array.length === 1) {
+            alert(array.length)
+            alert("Chuỗi chỉ có 1 từ, không nên viết tắt");
+        } else {
+            newArr[0] = array[0].toUpperCase();
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] == (" ")) {
+                    newArr.push((array[i + 1].toUpperCase()));
+                }
+            }
+        }
+        document.write(newArr);
+    }
+
+    let string = prompt("Nhập chuỗi");
+    creatNewWord(string);
+</script>

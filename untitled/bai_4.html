@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addProduct()">Thêm sản phẩm</button>
+<p id="display"></p>
+</body>
+</html>
+<script>
+    class Computer {
+        constructor(id, name, manufacturer, price) {
+            this.id = id;
+            this.name = name;
+            this.manufacturer = manufacturer;
+            this.price = price;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getManufacturer() {
+            return this.manufacturer;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        setId(id) {
+            id = this.getId();
+        }
+
+        setName(name) {
+            name = this.getName();
+
+        }
+
+        setManufacturer(manufacturer) {
+            manufacturer = this.getManufacturer();
+        }
+
+        setPrice(price) {
+            price = this.getPrice();
+        }
+    }
+
+    let arrayComputer = [];
+    let product1 = new Computer("MT-001", "Dell Inspiron 5558", "Dell", "14");
+    arrayComputer.push(product1);
+    displayProduct(arrayComputer);
+
+    function addProduct() {
+        let id = prompt("Nhập id");
+        let name = prompt("Nhập tên");
+        let manufacturer = prompt("Nhập hãng sản xuất");
+        let price = prompt("Nhập giá");
+        let newProduct1 = new Computer(id, name, manufacturer, price);
+        arrayComputer.push(newProduct1);
+        displayProduct(arrayComputer);
+    }
+
+    function displayProduct(arr) {
+        arr.sort(function (c1, c2) {
+            return c1.getPrice()- c2.getPrice();
+        });
+        let tableString = "<table border='1' cellspacing='0'>\n" +
+            "    <tr>\n" +
+            "        <th style='width: 160px'>Mã Sản Phẩm</th>\n" +
+            "        <th style='width: 160px'>Tên Sản Phẩm</th>\n" +
+            "        <th style='width: 160px'>Hãng Sản Xuất</th>\n" +
+            "        <th style='width: 160px'>Giá Bán(triệu đồng)</th>\n" +
+            "    </tr>\n"
+        for (let i = 0; i < arr.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td style="text-align: center" >' + arr[i].getId() + '</td>\n' +
+                '        <td style="text-align: center">' + arr[i].getName() + '</td>\n' +
+                '        <td style="text-align: center">' + arr[i].getManufacturer() + '</td>\n' +
+                '        <td style="text-align: center">' + arr[i].getPrice() + '</td>\n' +
+                '    </tr>'
+        }
+        tableString += "</table>"
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    displayProduct()
+</script>

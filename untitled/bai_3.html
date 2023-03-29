@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    function timDayFibonaci(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        let arrayFibonaci = [];
+        let n1 = 0, n2 = 1, nextnumber;
+        nextnumber = n1 + n2;
+        for (let i = 1; i <= max; i++) {
+            arrayFibonaci.push(n1);
+            n1 = n2;
+            n2 = nextnumber;
+            nextnumber = n1 + n2;
+        }
+        let newArray = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arrayFibonaci.length; j++) {
+                if (arr.indexOf(arr[i]) == arrayFibonaci[j]) {
+                    newArray.push(arr[i]);
+                }
+            }
+        }
+        return newArray.sort(function (a,b){
+            return a-b
+        });
+    }
+
+    let array = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
+    console.log(timDayFibonaci(array));
+
+</script>
