@@ -10,24 +10,28 @@
 </html>
 <script>
     function creatNewWord(str) {
-        let array = [];
+        let array =[];
         let newArr = [];
+        let arrayA=[]
+        let result="";
         str = str.toLowerCase();
-        array = str.split("");
-        if (array.length === 1) {
-            alert(array.length)
-            alert("Chuỗi chỉ có 1 từ, không nên viết tắt");
-        } else {
-            newArr[0] = array[0].toUpperCase();
-            for (let i = 0; i < array.length; i++) {
-                if (array[i] == (" ")) {
-                    newArr.push((array[i + 1].toUpperCase()));
-                }
+        array = str.split(" ");
+        for (let i = 0; i < array.length; i++) {
+            if (array[i]!=""){
+                newArr.push(array[i]);
             }
         }
-        document.write(newArr);
-    }
-
+        alert(newArr)
+        for (let i = 0; i < newArr.length; i++) {
+        if (newArr.length <= 1) {
+            alert("Chuỗi chỉ có 1 từ, không nên viết tắt");
+        } else {
+            arrayA.push(newArr[i].charAt(0).toUpperCase())
+                }
+            }
+        result=arrayA.join("");
+        alert(result);
+        }
     let string = prompt("Nhập chuỗi");
     creatNewWord(string);
 </script>

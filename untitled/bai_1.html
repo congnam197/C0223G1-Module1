@@ -9,9 +9,8 @@
 </body>
 </html>
 <script>
-    while (n <= 50) {
-        n = +prompt("Nhập vào số lượng phần tử");
-    }
+
+    let n = +prompt("Nhập vào số lượng phần tử");
     let array = [];
     for (let i = 0; i < n; i++) {
         array[i] = +prompt("Nhập phần tử thứ :" + (i + 1));
@@ -24,7 +23,7 @@
     for (let i = 3; i < n; i += 3) {
         if (array[i] % 5 == 0) {
             count++;
-            sum = +array[i];
+            sum +=array[i];
         }
     }
     avg = sum / count;
